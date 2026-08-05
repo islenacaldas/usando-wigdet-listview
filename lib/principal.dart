@@ -29,23 +29,7 @@ class _PrincipalState extends State<Principal> {
           backgroundColor: Colors.amberAccent,
           foregroundColor: Colors.blue,
         ),
-        body: ListView.separated(
-          itemCount: dias.length,
-          separatorBuilder: (BuildContext context, int index) {
-            return Divider();
-          },
-          itemBuilder: (BuildContext context, int index) {
-            return Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ListTile(
-                title: Text(dias[index]),
-                subtitle: Text("dia"),
-                trailing: Icon(Icons.access_alarms_rounded),
-                leading: Icon(Icons.access_time_outlined),
-              ),
-            );
-          },
-        ),
+        body: ListView(children: [Card()]),
       ),
     );
   }
