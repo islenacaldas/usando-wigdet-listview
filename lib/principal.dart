@@ -33,9 +33,16 @@ class _PrincipalState extends State<Principal> {
           children: [
             Card(
               child: ListTile(
-                Text("registrar eleccion"),
-                trailing: Icon(Icons.add),
-                leading: Icon(Icons.arrow_circle_right_outlined),
+                title: Text(
+                  "registrar eleccion",
+                  style: TextStyle(color: Colors.white, fontSize: 15),
+                ),
+                trailing: Icon(Icons.add, color: Colors.white, size: 30),
+                leading: Icon(
+                  Icons.arrow_circle_right_outlined,
+                  color: Colors.white,
+                  size: 30,
+                ),
               ),
               color: Colors.pink[300],
               shadowColor: Colors.black,
