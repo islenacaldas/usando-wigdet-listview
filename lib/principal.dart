@@ -1,5 +1,15 @@
 import 'package:flutter/material.dart';
 
+List dias = [
+  "lunes",
+  "martes",
+  "miercoles",
+  "jueves",
+  "viernes",
+  "sabado",
+  "domingo",
+];
+
 class Principal extends StatefulWidget {
   const Principal({super.key});
 
@@ -19,12 +29,20 @@ class _PrincipalState extends State<Principal> {
           backgroundColor: Colors.amberAccent,
           foregroundColor: Colors.blue,
         ),
-        body: ListView.builder(
-          itemCount: 9,
+        body: ListView.separated(
+          itemCount: dias.length,
+          separatorBuilder: (BuildContext context, int index) {
+            return Divider();
+          },
           itemBuilder: (BuildContext context, int index) {
-            return Text(
-              "elemento " + index.toString(),
-              style: TextStyle(fontSize: 40),
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ListTile(
+                title: Text(dias[index]),
+                subtitle: Text("dia"),
+                trailing: Icon(Icons.access_alarms_rounded),
+                leading: Icon(Icons.access_time_outlined),
+              ),
             );
           },
         ),
