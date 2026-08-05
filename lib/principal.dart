@@ -29,7 +29,20 @@ class _PrincipalState extends State<Principal> {
           backgroundColor: Colors.amberAccent,
           foregroundColor: Colors.blue,
         ),
-        body: ListView(children: [Card()]),
+        body: ListView(
+          children: [
+            Card(
+              child: ListTile(
+                Text("registrar eleccion"),
+                trailing: Icon(Icons.add),
+                leading: Icon(Icons.arrow_circle_right_outlined),
+              ),
+              color: Colors.pink[300],
+              shadowColor: Colors.black,
+              elevation: 5,
+            ),
+          ],
+        ),
       ),
     );
   }
