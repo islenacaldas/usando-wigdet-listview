@@ -19,23 +19,14 @@ class _PrincipalState extends State<Principal> {
           backgroundColor: Colors.amberAccent,
           foregroundColor: Colors.blue,
         ),
-        body: ListView(
-          children: [
-            Text("Hola mundo", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 1", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 2", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 3", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 4", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 5", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 6", style: TextStyle(fontSize: 60)),
-            Text("Hola mundo", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 1", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 2", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 3", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 4", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 5", style: TextStyle(fontSize: 60)),
-            Text("Esto es genial 6", style: TextStyle(fontSize: 60)),
-          ],
+        body: ListView.builder(
+          itemCount: 9,
+          itemBuilder: (BuildContext context, int index) {
+            return Text(
+              "elemento " + index.toString(),
+              style: TextStyle(fontSize: 40),
+            );
+          },
         ),
       ),
     );
